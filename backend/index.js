@@ -9,13 +9,16 @@ app.use(express.json());
 
 app.use(bodyParser.json());
 dotenv.config();
-
+app.use(cors());
 // Parse URL-encoded bodies (form submissions)
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "https://bookstore-mern-bmlq.onrender.com/",
+    origin: [
+      "https://bookstore-mern-bmlq.onrender.com",
+      "http://localhost:5173",
+    ],
     method: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
