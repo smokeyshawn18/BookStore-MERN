@@ -15,7 +15,7 @@ const DeleteBook = () => {
   useEffect(() => {
     // Fetch the book details
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://bookstore-backend-tryn.onrender.com/books/${id}`)
       .then((response) => {
         setBook(response.data); // Store book data
         setLoading(false); // Stop loading
