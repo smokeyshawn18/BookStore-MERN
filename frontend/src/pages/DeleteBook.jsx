@@ -30,7 +30,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true); // Start loading
     axios
-      .delete(`http://localhost:5555/books/${id}`) // Ensure this URL matches your fetch URL
+      .delete(`https://bookstore-backend-tryn.onrender.com/books/${id}`) // Ensure this URL matches your fetch URL
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book deleted successfully!", { variant: "success" });

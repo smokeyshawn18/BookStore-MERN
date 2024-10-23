@@ -14,7 +14,9 @@ const ShowBook = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const res = await axios.get(`http://localhost:5555/books/${id}`);
+        const res = await axios.get(
+          `https://bookstore-backend-tryn.onrender.com/books/${id}`
+        );
         console.log("Response from API:", res);
 
         if (res.data && res.data.data) {

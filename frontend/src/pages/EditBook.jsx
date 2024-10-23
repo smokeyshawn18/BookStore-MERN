@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     // Fetch the book data on component mount
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://bookstore-backend-tryn.onrender.com/books/${id}`)
       .then((response) => {
         const { title, author, publishYear } = response.data;
         setAuthor(author || "");

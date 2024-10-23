@@ -7,7 +7,6 @@ import bodyParser from "body-parser";
 const app = express();
 app.use(express.json());
 
-app.use(cors());
 app.use(bodyParser.json());
 dotenv.config();
 
@@ -16,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "",
+    origin: "https://bookstore-mern-bmlq.onrender.com/",
     method: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
