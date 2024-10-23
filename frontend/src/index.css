@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+tbody tr {
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+    /* Change to any color you prefer */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Light grey for even rows */
+}
